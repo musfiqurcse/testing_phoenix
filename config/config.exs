@@ -22,6 +22,12 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
+config :algolia,
+  application_id: "4SEEF4BXUC",
+  api_key: "6c0b5acaa20c5cf5a260f643e7cc3b59"
+
+config :stripe, secret_key: "sk_test_FgUtCE6x7h1xZ4dH85PqIRbS"
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"

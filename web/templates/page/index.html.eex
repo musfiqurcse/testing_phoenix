@@ -2,7 +2,14 @@
   <h2><%= gettext "Welcome to %{name}", name: "Phoenix!" %></h2>
   <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
 </div>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearchLite.min.js"></script>
+<script>
+$(document).ready(function(){
+  var client =algoliasearch('4SEEF4BXUC','6c0b5acaa20c5cf5a260f643e7cc3b59')
+  console.log(client);
+})
 
+</script>
 <div class="row marketing">
   <div class="col-lg-6">
     <h4>Resources</h4>
