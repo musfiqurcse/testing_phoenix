@@ -9,6 +9,9 @@ use Mix.Config
 config :ectoservice,
   ecto_repos: [Ectoservice.Repo]
 
+config :ffmpex, ffmpeg_path: "D:/FFMpeg/bin/ffmpeg"
+config :ffmpex, ffprobe_path: "D:/FFMpeg/bin/ffprobe"
+
 # Configures the endpoint
 config :ectoservice, Ectoservice.Endpoint,
   url: [host: "localhost"],
@@ -25,6 +28,10 @@ config :logger, :console,
 config :algolia,
   application_id: "4SEEF4BXUC",
   api_key: "6c0b5acaa20c5cf5a260f643e7cc3b59"
+
+config :ibm_watson,
+  username: "62b8fff6-ef18-4fa3-aec8-00fe3ae6b9a0",
+  password: "Xof0nKmNW4FG"
 
 config :stripe, secret_key: "sk_test_FgUtCE6x7h1xZ4dH85PqIRbS"
 

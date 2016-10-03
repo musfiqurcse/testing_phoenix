@@ -26,6 +26,8 @@ defmodule Ectoservice.Router do
      resources "/rolemappings", RoleMappingController
      get "/createpermission", PermissionPageController, :create_permission
      post "/createpermission", PermissionPageController, :submit_permission
+     get "/file", PageController, :file_audio
+     post "/file", PageController, :file_receive
   end
   scope "/api", Ectoservice do
     pipe_through :browser

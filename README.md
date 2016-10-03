@@ -10,6 +10,13 @@ To start your Phoenix app:
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
+## Working with IBM Watson is here my boy
+
+  * Register in Bluemix for Getting service for IBM Watson
+  * After that get a service , such as text to speech
+  * Read the file directory to pass data to the IBM watson
+  * Get IBM Watson Result from there as a JSON
+  
 
 ## Learn more
 

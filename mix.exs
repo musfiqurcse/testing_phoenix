@@ -19,7 +19,7 @@ defmodule Ectoservice.Mixfile do
   def application do
     [mod: {Ectoservice, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :comeonin, :httpoison, :algolia, :stripe , :timex]]
+                    :phoenix_ecto, :postgrex, :comeonin, :httpoison, :algolia, :stripe , :timex, :ffmpex]]
   end
 
   # Specifies which paths to compile per environment.
@@ -42,7 +42,9 @@ defmodule Ectoservice.Mixfile do
  {:httpoison, "~> 0.9.0"},
 {:algolia, "~> 0.3.2"},
 {:stripe, "~> 0.3.0", hex: :stripe_elixir},
-{:timex, "~> 3.0"}]
+{:ffmpex, "~> 0.3.0"},
+{:timex, "~> 3.0"}
+]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
