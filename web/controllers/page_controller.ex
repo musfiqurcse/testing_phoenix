@@ -16,7 +16,7 @@ use FFmpex.Options
 
      #x=Repo.get!(Ectoservice.Tranc,"pic")
      #IO.inspect changeset=build_assoc(x, :tranc_by ,%{details: "no where to go",tranc_id: x.name})
-  #   IO.inspect changeset1=Tranc_by.changeset(%Tranc_by{},changeset);
+    #  IO.inspect changeset1=Tranc_by.changeset(%Tranc_by{},changeset);
     # case Repo.insert(changeset)
     #   {:ok, _} ->
     #     conn
@@ -26,6 +26,9 @@ use FFmpex.Options
     #       IO.inspect changeset.error
     # end
     ##  render conn, "index.html"
+
+
+
     render conn, "index.html"
   end
   def file_audio(conn, _params)do
@@ -35,8 +38,8 @@ use FFmpex.Options
   def file_receive(conn, %{"session" => file})do
     HTTPoison.start
   #  %{"session" => file} IO.inspect file
-IO.inspect "============="
-IO.inspect upload=file["roleid"]
+IO.inspect   "============="
+IO.inspect   upload=file["roleid"]
 IO.inspect   extension = Path.extname(upload.filename)
 IO.inspect   File.cp(upload.path, "../phoenixEcto/ssss#{extension}")
 command =
@@ -93,6 +96,10 @@ IO.inspect  Poison.decode(HTTPoison.post!(url, {:file , "e:/temp Project/erlang/
   defp auth_header(username, password) do
     encoded = Base.encode64("#{username}:#{password}")
     {"Authorization", "Basic #{encoded}"}
+
+  end
+  def show_data(conn, _params)do
+      
   end
 
 end
