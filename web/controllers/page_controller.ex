@@ -12,10 +12,8 @@ use FFmpex.Options
                     String.rjust(Integer.to_string(i),3, ?0)
                       end
           IO.inspect ss
-
-
      #x=Repo.get!(Ectoservice.Tranc,"pic")
-     #IO.inspect changeset=build_assoc(x, :tranc_by ,%{details: "no where to go",tranc_id: x.name})
+     #IO.inspect changeset= (x, :tranc_by ,%{details: "no where to go",tranc_id: x.name})
     #  IO.inspect changeset1=Tranc_by.changeset(%Tranc_by{},changeset);
     # case Repo.insert(changeset)
     #   {:ok, _} ->
@@ -27,9 +25,7 @@ use FFmpex.Options
     # end
     ##  render conn, "index.html"
 
-
-
-    render conn, "index.html"
+     render conn, "index.html"
   end
   def file_audio(conn, _params)do
 
@@ -99,7 +95,7 @@ IO.inspect  Poison.decode(HTTPoison.post!(url, {:file , "e:/temp Project/erlang/
 
   end
   def show_data(conn, _params)do
-      
+
   end
 
 end
