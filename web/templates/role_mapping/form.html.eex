@@ -4,9 +4,12 @@
       <p>Oops, something went wrong! Please check the errors below.</p>
     </div>
   <% end %>
-
   <div class="form-group">
     <%= text_input f, :user_id, class: "form-control", placeholder: "User Id" %>
+    <%= checkbox f, "[check_box][1]" , value: "1", checked_value: false %>
+    <%= checkbox f, "[check_box][2]" , value: "2", checked_value: false %>
+    <%= checkbox f, "[check_box][3]" , value: "3", checked_value: false %>
+
       <%= text_input f, :role_id, class: "form-control", placeholder: "Role Id" %>
     <%= submit "Submit", class: "btn btn-primary" %>
   </div>

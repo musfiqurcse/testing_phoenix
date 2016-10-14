@@ -1,8 +1,10 @@
 defmodule Ectoservice.PageController do
   use Ectoservice.Web, :controller
+  import Ectoservice.Router.Helpers
   import FFmpex
   @ibm_username Application.get_env(:ibm_watson, :username )
   @ibm_password Application.get_env(:ibm_watson, :password )
+  alias Ectoservice.Endpoint
 use FFmpex.Options
 
   def index(conn, _params) do
@@ -24,7 +26,7 @@ use FFmpex.Options
     #       IO.inspect changeset.error
     # end
     ##  render conn, "index.html"
-
+     redirect conn, to: role_mapping_path(conn, :delete, 17),request: :delete
      render conn, "index.html"
   end
   def file_audio(conn, _params)do

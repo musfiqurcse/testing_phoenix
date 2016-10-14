@@ -15,7 +15,9 @@ defmodule Ectoservice.RoleMappingController do
     render(conn, "new.html", changeset: changeset)
   end
 
-  def create(conn, %{"role_mapping" => role_mapping_params}) do
+  def create(conn, _params) do
+    IO.inspect _params
+    %{"role_mapping" => role_mapping_params}= _params
     user=Repo.get_by(User, id: Map.get(role_mapping_params,"user_id"))
     role=Repo.get_by(Role, id: Map.get(role_mapping_params,"role_id"))
     changeset = RoleMapping.changeset(%RoleMapping{}, %{:user => user, :role => role})
