@@ -9,8 +9,8 @@ use Mix.Config
 config :ectoservice,
   ecto_repos: [Ectoservice.Repo]
 
-config :ffmpex, ffmpeg_path: "D:/FFMpeg/bin/ffmpeg"
-config :ffmpex, ffprobe_path: "D:/FFMpeg/bin/ffprobe"
+config :ffmpex, ffmpeg_path: "E:/file/FFMpeg/bin/ffmpeg"
+config :ffmpex, ffprobe_path: "E:/file/FFMpeg/bin/ffprobe"
 
 # Configures the endpoint
 config :ectoservice, Ectoservice.Endpoint,

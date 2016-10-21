@@ -10,7 +10,7 @@ defmodule Ectoservice.Endpoint do
     # plug Plug.Static, at: "/files", from: ".../phoenixEcto"
   plug Plug.Static,
     at: "/", from: :ectoservice, gzip: false,
-    only: ~w(css fonts images js favicon.ico robots.txt)
+    only: ~w(css fonts images video js favicon.ico robots.txt)
 
 
 

@@ -1,0 +1,4 @@
+<h1>Welcome to Download File</h1>
+<%= link "Download File : "<>@file, to: static_path(@conn, "/video/"<>@file), class: "btn" %> <br>
+
+<%= link "Back to previous page", to: page_path(@conn, :file_audio) %>

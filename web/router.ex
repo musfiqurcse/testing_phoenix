@@ -17,7 +17,8 @@ defmodule Ectoservice.Router do
   scope "/", Ectoservice do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
+    get "/", PageController,  :index
+    get "/error/:id", PageController,  :error_dis
     resources "/users", UserController, only: [:index, :new, :create]
     get "/users/:id", UserController, :show
     resources "/sessions", SessionController, only: [:new, :create, :delete]
@@ -28,6 +29,8 @@ defmodule Ectoservice.Router do
      post "/createpermission", PermissionPageController, :submit_permission
      get "/file", PageController, :file_audio
      post "/file", PageController, :file_receive
+     get "/file/go/:download", PageController, :download
+     get "/test/:time", PageController, :testing
   end
   scope "/api", Ectoservice do
     pipe_through :browser
